@@ -33,3 +33,5 @@
 *.ex5
 *.DS_Store
 doc/~$Relativity_gj.xlsx
+
+python/venv/
