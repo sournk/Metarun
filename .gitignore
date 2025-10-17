@@ -35,3 +35,7 @@
 doc/~$Relativity_gj.xlsx
 
 python/venv/
+*.set
+*.csv
+*.opt
+*.tst
