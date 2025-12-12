@@ -1,0 +1,2812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimization Report: HTFVWAP-MT5-Bot-2.00</title>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <!-- DataTables CSS & JS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 20px; }
+        h1 { color: #333; font-size: 1.5em; }
+        .header-info { background: #f5f5f5; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
+        .header-info table { border: none; }
+        .header-info td { padding: 3px 15px 3px 0; vertical-align: top; }
+        
+        /* DataTables customization */
+        table.dataTable { font-size: 13px; }
+        table.dataTable thead th { background: #4a5568; color: white; padding: 10px 8px; }
+        table.dataTable tbody td { padding: 6px 8px; }
+        table.dataTable tbody tr:hover { background: #e2e8f0 !important; }
+        
+        /* Column filters */
+        .column-filter { width: 100%; box-sizing: border-box; padding: 4px; margin-top: 5px; font-size: 11px; }
+        thead tr.filters th { background: #e2e8f0; padding: 5px; }
+        
+        /* Color cells */
+        .cell-pink { background-color: pink; }
+        .cell-moccasin { background-color: moccasin; }
+        .cell-lightgreen { background-color: lightgreen; }
+        .cell-green1 { background-color: #C5E8B7; }
+        .cell-green2 { background-color: #ABE098; }
+        .cell-green3 { background-color: #83D475; }
+        .cell-green4 { background-color: #57C84D; }
+        .cell-green5 { background-color: #2EB62C; }
+        
+        /* Sorting hint */
+        .sort-hint { font-size: 11px; color: #666; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+<h1>📊 Optimization Report: HTFVWAP-MT5-Bot-2.00</h1>
+
+<div class="header-info">
+    <table>
+        <tr>
+            <td><b>Interval:</b> 2020-01-01 → 2025-12-01</td>
+            <td><b>Server:</b> Tickmill-Demo</td>
+            <td><b>Deposit:</b> 100000</td>
+            <td><b>Symbols:</b> 3</td>
+            <td><b>Results:</b> 167</td>
+        </tr>
+    </table>
+</div>
+
+<p class="sort-hint">💡 <b>Shift+Click</b> on column headers for multi-column sorting</p>
+
+<table id="reportTable" class="display" style="width:100%">
+    <thead>
+        <tr class="filters">
+            <th>#</th>
+            <th>Symbol</th>
+            <th>Pass</th>
+            <th>Profit</th>
+            <th>%/yr</th>
+            <th>DD%</th>
+            <th>Calmar</th>
+            <th>CC</th>
+            <th>Pos/mo</th>
+            <th>WR%</th>
+            <th>PF</th>
+            <th>RF</th>
+            <th>Sharpe</th>
+            <th>Rank</th>
+        </tr>
+        <tr>
+            <th>#</th>
+            <th>Symbol</th>
+            <th>Pass</th>
+            <th>Profit</th>
+            <th>%/yr</th>
+            <th>DD%</th>
+            <th>Calmar</th>
+            <th>CC</th>
+            <th>Pos/mo</th>
+            <th>WR%</th>
+            <th>PF</th>
+            <th>RF</th>
+            <th>Sharpe</th>
+            <th>Rank</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>AAPL</td>
+            <td>3008</td>
+            <td>232,268</td>
+            <td class="cell-green5">39.2</td>
+            <td class="cell-moccasin">10.19</td>
+            <td class="cell-lightgreen">3.9</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>46.4</td>
+            <td>29.9</td>
+            <td>1.28</td>
+            <td>10.62</td>
+            <td>6.97</td>
+            <td>83.5</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>AAPL</td>
+            <td>2878</td>
+            <td>231,570</td>
+            <td class="cell-green5">39.1</td>
+            <td class="cell-moccasin">10.21</td>
+            <td class="cell-lightgreen">3.8</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>46.4</td>
+            <td>29.9</td>
+            <td>1.28</td>
+            <td>10.61</td>
+            <td>6.94</td>
+            <td>83.0</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>AAPL</td>
+            <td>2397</td>
+            <td>226,005</td>
+            <td class="cell-green5">38.2</td>
+            <td class="cell-moccasin">11.08</td>
+            <td class="cell-lightgreen">3.4</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>46.4</td>
+            <td>29.4</td>
+            <td>1.27</td>
+            <td>10.31</td>
+            <td>6.59</td>
+            <td>73.1</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>AAPL</td>
+            <td>2869</td>
+            <td>226,005</td>
+            <td class="cell-green5">38.2</td>
+            <td class="cell-moccasin">11.08</td>
+            <td class="cell-lightgreen">3.4</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>46.4</td>
+            <td>29.4</td>
+            <td>1.27</td>
+            <td>10.31</td>
+            <td>6.59</td>
+            <td>73.1</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>AAPL</td>
+            <td>2816</td>
+            <td>211,344</td>
+            <td class="cell-green5">35.7</td>
+            <td class="cell-moccasin">10.46</td>
+            <td class="cell-lightgreen">3.4</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>46.4</td>
+            <td>30.0</td>
+            <td>1.26</td>
+            <td>10.15</td>
+            <td>6.62</td>
+            <td>72.6</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>AAPL</td>
+            <td>2714</td>
+            <td>230,461</td>
+            <td class="cell-green5">38.9</td>
+            <td class="cell-moccasin">11.86</td>
+            <td class="cell-lightgreen">3.3</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>46.4</td>
+            <td>30.0</td>
+            <td>1.28</td>
+            <td>10.56</td>
+            <td>6.94</td>
+            <td>71.6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>AAPL</td>
+            <td>2880</td>
+            <td>232,022</td>
+            <td class="cell-green5">39.2</td>
+            <td class="cell-moccasin">12.27</td>
+            <td class="cell-lightgreen">3.2</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>39.8</td>
+            <td>31.8</td>
+            <td>1.31</td>
+            <td>10.59</td>
+            <td>7.38</td>
+            <td>71.5</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>AAPL</td>
+            <td>3009</td>
+            <td>232,022</td>
+            <td class="cell-green5">39.2</td>
+            <td class="cell-moccasin">12.27</td>
+            <td class="cell-lightgreen">3.2</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>39.8</td>
+            <td>31.8</td>
+            <td>1.31</td>
+            <td>10.59</td>
+            <td>7.38</td>
+            <td>71.5</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>AAPL</td>
+            <td>2932</td>
+            <td>229,766</td>
+            <td class="cell-green5">38.8</td>
+            <td class="cell-moccasin">11.88</td>
+            <td class="cell-lightgreen">3.3</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>46.4</td>
+            <td>30.0</td>
+            <td>1.28</td>
+            <td>10.54</td>
+            <td>6.91</td>
+            <td>71.1</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>AAPL</td>
+            <td>2865</td>
+            <td>282,242</td>
+            <td class="cell-green5">47.7</td>
+            <td class="cell-moccasin">14.10</td>
+            <td class="cell-lightgreen">3.4</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>49.2</td>
+            <td>31.5</td>
+            <td>1.28</td>
+            <td>9.83</td>
+            <td>5.97</td>
+            <td>70.8</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>AAPL</td>
+            <td>3078</td>
+            <td>282,242</td>
+            <td class="cell-green5">47.7</td>
+            <td class="cell-moccasin">14.10</td>
+            <td class="cell-lightgreen">3.4</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>49.2</td>
+            <td>31.5</td>
+            <td>1.28</td>
+            <td>9.83</td>
+            <td>5.97</td>
+            <td>70.8</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>AAPL</td>
+            <td>2503</td>
+            <td>263,175</td>
+            <td class="cell-green5">44.5</td>
+            <td class="cell-moccasin">12.76</td>
+            <td class="cell-lightgreen">3.5</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>66.5</td>
+            <td>28.3</td>
+            <td>1.22</td>
+            <td>11.04</td>
+            <td>5.11</td>
+            <td>70.2</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>AAPL</td>
+            <td>2749</td>
+            <td>263,175</td>
+            <td class="cell-green5">44.5</td>
+            <td class="cell-moccasin">12.76</td>
+            <td class="cell-lightgreen">3.5</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>66.5</td>
+            <td>28.3</td>
+            <td>1.22</td>
+            <td>11.04</td>
+            <td>5.11</td>
+            <td>70.2</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>AAPL</td>
+            <td>2728</td>
+            <td>221,375</td>
+            <td class="cell-green5">37.4</td>
+            <td class="cell-moccasin">11.43</td>
+            <td class="cell-lightgreen">3.3</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>46.4</td>
+            <td>30.1</td>
+            <td>1.27</td>
+            <td>10.48</td>
+            <td>6.76</td>
+            <td>70.0</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>AAPL</td>
+            <td>2911</td>
+            <td>236,993</td>
+            <td class="cell-green5">40.0</td>
+            <td class="cell-moccasin">12.58</td>
+            <td class="cell-lightgreen">3.2</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>39.8</td>
+            <td>31.2</td>
+            <td>1.31</td>
+            <td>10.05</td>
+            <td>7.30</td>
+            <td>69.8</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>AAPL</td>
+            <td>2973</td>
+            <td>236,499</td>
+            <td class="cell-green5">39.9</td>
+            <td class="cell-moccasin">12.58</td>
+            <td class="cell-lightgreen">3.2</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>39.8</td>
+            <td>31.2</td>
+            <td>1.31</td>
+            <td>10.03</td>
+            <td>7.28</td>
+            <td>69.6</td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>AAPL</td>
+            <td>2828</td>
+            <td>261,254</td>
+            <td class="cell-green5">44.1</td>
+            <td class="cell-moccasin">12.83</td>
+            <td class="cell-lightgreen">3.4</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>66.5</td>
+            <td>28.4</td>
+            <td>1.22</td>
+            <td>11.02</td>
+            <td>5.08</td>
+            <td>69.3</td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td>AAPL</td>
+            <td>2934</td>
+            <td>224,198</td>
+            <td class="cell-green5">37.9</td>
+            <td class="cell-moccasin">11.87</td>
+            <td class="cell-lightgreen">3.2</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>46.4</td>
+            <td>29.9</td>
+            <td>1.27</td>
+            <td>10.51</td>
+            <td>6.83</td>
+            <td>68.5</td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td>AAPL</td>
+            <td>3034</td>
+            <td>222,384</td>
+            <td class="cell-green5">37.6</td>
+            <td class="cell-moccasin">12.00</td>
+            <td class="cell-lightgreen">3.1</td>
+            <td class="cell-lightgreen">0.97</td>
+            <td>39.8</td>
+            <td>31.6</td>
+            <td>1.30</td>
+            <td>10.29</td>
+            <td>7.10</td>
+            <td>68.1</td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>AAPL</td>
+            <td>2881</td>
+            <td>226,401</td>
+            <td class="cell-green5">38.2</td>
+            <td class="cell-moccasin">12.16</td>
+            <td class="cell-lightgreen">3.1</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>39.8</td>
+            <td>31.2</td>
+            <td>1.29</td>
+            <td>9.56</td>
+            <td>7.08</td>
+            <td>67.5</td>
+        </tr>
+        <tr>
+            <td>21</td>
+            <td>AAPL</td>
+            <td>2753</td>
+            <td>236,327</td>
+            <td class="cell-green5">39.9</td>
+            <td class="cell-moccasin">14.01</td>
+            <td class="cell-lightgreen">2.8</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>33.7</td>
+            <td>33.3</td>
+            <td>1.35</td>
+            <td>10.96</td>
+            <td>7.78</td>
+            <td>67.4</td>
+        </tr>
+        <tr>
+            <td>22</td>
+            <td>AAPL</td>
+            <td>2959</td>
+            <td>236,327</td>
+            <td class="cell-green5">39.9</td>
+            <td class="cell-moccasin">14.01</td>
+            <td class="cell-lightgreen">2.8</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>33.7</td>
+            <td>33.3</td>
+            <td>1.35</td>
+            <td>10.96</td>
+            <td>7.78</td>
+            <td>67.4</td>
+        </tr>
+        <tr>
+            <td>23</td>
+            <td>AAPL</td>
+            <td>2817</td>
+            <td>219,122</td>
+            <td class="cell-green5">37.0</td>
+            <td class="cell-moccasin">11.93</td>
+            <td class="cell-lightgreen">3.1</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>46.4</td>
+            <td>30.1</td>
+            <td>1.27</td>
+            <td>10.36</td>
+            <td>6.71</td>
+            <td>66.9</td>
+        </tr>
+        <tr>
+            <td>24</td>
+            <td>AAPL</td>
+            <td>2599</td>
+            <td>215,877</td>
+            <td class="cell-green5">36.5</td>
+            <td class="cell-moccasin">11.51</td>
+            <td class="cell-lightgreen">3.2</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>46.4</td>
+            <td>29.5</td>
+            <td>1.26</td>
+            <td>10.10</td>
+            <td>6.42</td>
+            <td>66.7</td>
+        </tr>
+        <tr>
+            <td>25</td>
+            <td>AAPL</td>
+            <td>2795</td>
+            <td>218,399</td>
+            <td class="cell-green5">36.9</td>
+            <td class="cell-moccasin">11.96</td>
+            <td class="cell-lightgreen">3.1</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>46.4</td>
+            <td>30.1</td>
+            <td>1.27</td>
+            <td>10.34</td>
+            <td>6.68</td>
+            <td>66.5</td>
+        </tr>
+        <tr>
+            <td>26</td>
+            <td>AAPL</td>
+            <td>2029</td>
+            <td>224,909</td>
+            <td class="cell-green5">38.0</td>
+            <td class="cell-moccasin">12.31</td>
+            <td class="cell-lightgreen">3.1</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>39.8</td>
+            <td>31.3</td>
+            <td>1.29</td>
+            <td>9.55</td>
+            <td>7.08</td>
+            <td>66.4</td>
+        </tr>
+        <tr>
+            <td>27</td>
+            <td>AAPL</td>
+            <td>2904</td>
+            <td>224,909</td>
+            <td class="cell-green5">38.0</td>
+            <td class="cell-moccasin">12.31</td>
+            <td class="cell-lightgreen">3.1</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>39.8</td>
+            <td>31.3</td>
+            <td>1.29</td>
+            <td>9.55</td>
+            <td>7.08</td>
+            <td>66.4</td>
+        </tr>
+        <tr>
+            <td>28</td>
+            <td>AAPL</td>
+            <td>2903</td>
+            <td>222,313</td>
+            <td class="cell-green5">37.5</td>
+            <td class="cell-moccasin">12.16</td>
+            <td class="cell-lightgreen">3.1</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>46.4</td>
+            <td>29.5</td>
+            <td>1.27</td>
+            <td>10.30</td>
+            <td>6.56</td>
+            <td>65.9</td>
+        </tr>
+        <tr>
+            <td>29</td>
+            <td>AAPL</td>
+            <td>2601</td>
+            <td>269,488</td>
+            <td class="cell-green5">45.5</td>
+            <td class="cell-moccasin">14.49</td>
+            <td class="cell-lightgreen">3.1</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>49.2</td>
+            <td>32.0</td>
+            <td>1.27</td>
+            <td>9.65</td>
+            <td>5.88</td>
+            <td>65.8</td>
+        </tr>
+        <tr>
+            <td>30</td>
+            <td>AAPL</td>
+            <td>2829</td>
+            <td>254,666</td>
+            <td class="cell-green5">43.0</td>
+            <td class="cell-moccasin">13.13</td>
+            <td class="cell-lightgreen">3.3</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>66.5</td>
+            <td>28.3</td>
+            <td>1.21</td>
+            <td>10.89</td>
+            <td>5.00</td>
+            <td>65.7</td>
+        </tr>
+        <tr>
+            <td>31</td>
+            <td>AAPL</td>
+            <td>2576</td>
+            <td>278,916</td>
+            <td class="cell-green5">47.1</td>
+            <td class="cell-moccasin">14.75</td>
+            <td class="cell-lightgreen">3.2</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>57.1</td>
+            <td>29.5</td>
+            <td>1.25</td>
+            <td>10.45</td>
+            <td>5.43</td>
+            <td>65.4</td>
+        </tr>
+        <tr>
+            <td>32</td>
+            <td>AAPL</td>
+            <td>2738</td>
+            <td>224,711</td>
+            <td class="cell-green5">38.0</td>
+            <td class="cell-moccasin">12.24</td>
+            <td class="cell-lightgreen">3.1</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>46.4</td>
+            <td>29.3</td>
+            <td>1.27</td>
+            <td>10.26</td>
+            <td>6.57</td>
+            <td>65.3</td>
+        </tr>
+        <tr>
+            <td>33</td>
+            <td>AAPL</td>
+            <td>2631</td>
+            <td>224,647</td>
+            <td class="cell-green5">37.9</td>
+            <td class="cell-moccasin">12.24</td>
+            <td class="cell-lightgreen">3.1</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>46.4</td>
+            <td>29.3</td>
+            <td>1.27</td>
+            <td>10.26</td>
+            <td>6.57</td>
+            <td>65.2</td>
+        </tr>
+        <tr>
+            <td>34</td>
+            <td>AAPL</td>
+            <td>2793</td>
+            <td>231,929</td>
+            <td class="cell-green5">39.2</td>
+            <td class="cell-moccasin">13.22</td>
+            <td class="cell-lightgreen">3.0</td>
+            <td class="cell-lightgreen">0.97</td>
+            <td>39.8</td>
+            <td>31.6</td>
+            <td>1.31</td>
+            <td>10.25</td>
+            <td>7.32</td>
+            <td>65.2</td>
+        </tr>
+        <tr>
+            <td>35</td>
+            <td>AAPL</td>
+            <td>3011</td>
+            <td>231,929</td>
+            <td class="cell-green5">39.2</td>
+            <td class="cell-moccasin">13.22</td>
+            <td class="cell-lightgreen">3.0</td>
+            <td class="cell-lightgreen">0.97</td>
+            <td>39.8</td>
+            <td>31.6</td>
+            <td>1.31</td>
+            <td>10.25</td>
+            <td>7.32</td>
+            <td>65.2</td>
+        </tr>
+        <tr>
+            <td>36</td>
+            <td>AAPL</td>
+            <td>3052</td>
+            <td>278,191</td>
+            <td class="cell-green5">47.0</td>
+            <td class="cell-moccasin">14.76</td>
+            <td class="cell-lightgreen">3.2</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>57.1</td>
+            <td>29.5</td>
+            <td>1.25</td>
+            <td>10.47</td>
+            <td>5.41</td>
+            <td>65.1</td>
+        </tr>
+        <tr>
+            <td>37</td>
+            <td>AAPL</td>
+            <td>2928</td>
+            <td>230,016</td>
+            <td class="cell-green5">38.9</td>
+            <td class="cell-moccasin">13.91</td>
+            <td class="cell-lightgreen">2.8</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>33.7</td>
+            <td>33.2</td>
+            <td>1.34</td>
+            <td>10.52</td>
+            <td>7.64</td>
+            <td>65.1</td>
+        </tr>
+        <tr>
+            <td>38</td>
+            <td>AAPL</td>
+            <td>2996</td>
+            <td>230,016</td>
+            <td class="cell-green5">38.9</td>
+            <td class="cell-moccasin">13.91</td>
+            <td class="cell-lightgreen">2.8</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>33.7</td>
+            <td>33.2</td>
+            <td>1.34</td>
+            <td>10.52</td>
+            <td>7.64</td>
+            <td>65.1</td>
+        </tr>
+        <tr>
+            <td>39</td>
+            <td>AAPL</td>
+            <td>1896</td>
+            <td>269,343</td>
+            <td class="cell-green5">45.5</td>
+            <td class="cell-moccasin">14.07</td>
+            <td class="cell-lightgreen">3.2</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>66.5</td>
+            <td>27.8</td>
+            <td>1.22</td>
+            <td>10.87</td>
+            <td>5.04</td>
+            <td>64.6</td>
+        </tr>
+        <tr>
+            <td>40</td>
+            <td>AAPL</td>
+            <td>2659</td>
+            <td>269,343</td>
+            <td class="cell-green5">45.5</td>
+            <td class="cell-moccasin">14.07</td>
+            <td class="cell-lightgreen">3.2</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>66.5</td>
+            <td>27.8</td>
+            <td>1.22</td>
+            <td>10.87</td>
+            <td>5.04</td>
+            <td>64.6</td>
+        </tr>
+        <tr>
+            <td>41</td>
+            <td>AAPL</td>
+            <td>2265</td>
+            <td>220,510</td>
+            <td class="cell-green5">37.2</td>
+            <td class="cell-moccasin">12.23</td>
+            <td class="cell-lightgreen">3.0</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>46.4</td>
+            <td>29.5</td>
+            <td>1.26</td>
+            <td>10.25</td>
+            <td>6.56</td>
+            <td>64.2</td>
+        </tr>
+        <tr>
+            <td>42</td>
+            <td>AAPL</td>
+            <td>2654</td>
+            <td>220,470</td>
+            <td class="cell-green5">37.2</td>
+            <td class="cell-moccasin">12.23</td>
+            <td class="cell-lightgreen">3.0</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>46.4</td>
+            <td>29.5</td>
+            <td>1.26</td>
+            <td>10.25</td>
+            <td>6.56</td>
+            <td>64.2</td>
+        </tr>
+        <tr>
+            <td>43</td>
+            <td>AAPL</td>
+            <td>2731</td>
+            <td>204,801</td>
+            <td class="cell-green5">34.6</td>
+            <td class="cell-moccasin">11.12</td>
+            <td class="cell-lightgreen">3.1</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>46.4</td>
+            <td>29.5</td>
+            <td>1.25</td>
+            <td>9.82</td>
+            <td>6.25</td>
+            <td>64.0</td>
+        </tr>
+        <tr>
+            <td>44</td>
+            <td>AAPL</td>
+            <td>2848</td>
+            <td>204,801</td>
+            <td class="cell-green5">34.6</td>
+            <td class="cell-moccasin">11.12</td>
+            <td class="cell-lightgreen">3.1</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>46.4</td>
+            <td>29.5</td>
+            <td>1.25</td>
+            <td>9.82</td>
+            <td>6.25</td>
+            <td>64.0</td>
+        </tr>
+        <tr>
+            <td>45</td>
+            <td>AAPL</td>
+            <td>2590</td>
+            <td>250,600</td>
+            <td class="cell-green5">42.3</td>
+            <td class="cell-moccasin">13.23</td>
+            <td class="cell-lightgreen">3.2</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>66.5</td>
+            <td>28.5</td>
+            <td>1.21</td>
+            <td>10.74</td>
+            <td>4.93</td>
+            <td>63.8</td>
+        </tr>
+        <tr>
+            <td>46</td>
+            <td>AAPL</td>
+            <td>2649</td>
+            <td>250,600</td>
+            <td class="cell-green5">42.3</td>
+            <td class="cell-moccasin">13.23</td>
+            <td class="cell-lightgreen">3.2</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>66.5</td>
+            <td>28.5</td>
+            <td>1.21</td>
+            <td>10.74</td>
+            <td>4.93</td>
+            <td>63.8</td>
+        </tr>
+        <tr>
+            <td>47</td>
+            <td>AAPL</td>
+            <td>2313</td>
+            <td>263,630</td>
+            <td class="cell-green5">44.5</td>
+            <td class="cell-moccasin">14.45</td>
+            <td class="cell-lightgreen">3.1</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>49.2</td>
+            <td>31.8</td>
+            <td>1.26</td>
+            <td>9.18</td>
+            <td>5.79</td>
+            <td>63.5</td>
+        </tr>
+        <tr>
+            <td>48</td>
+            <td>AAPL</td>
+            <td>2594</td>
+            <td>267,429</td>
+            <td class="cell-green5">45.2</td>
+            <td class="cell-moccasin">14.71</td>
+            <td class="cell-lightgreen">3.1</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>49.2</td>
+            <td>31.9</td>
+            <td>1.27</td>
+            <td>9.12</td>
+            <td>5.85</td>
+            <td>63.4</td>
+        </tr>
+        <tr>
+            <td>49</td>
+            <td>AAPL</td>
+            <td>2720</td>
+            <td>214,706</td>
+            <td class="cell-green5">36.3</td>
+            <td class="cell-moccasin">12.17</td>
+            <td class="cell-lightgreen">3.0</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>46.4</td>
+            <td>30.2</td>
+            <td>1.26</td>
+            <td>10.01</td>
+            <td>6.57</td>
+            <td>62.9</td>
+        </tr>
+        <tr>
+            <td>50</td>
+            <td>AAPL</td>
+            <td>2796</td>
+            <td>214,706</td>
+            <td class="cell-green5">36.3</td>
+            <td class="cell-moccasin">12.17</td>
+            <td class="cell-lightgreen">3.0</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>46.4</td>
+            <td>30.2</td>
+            <td>1.26</td>
+            <td>10.01</td>
+            <td>6.57</td>
+            <td>62.9</td>
+        </tr>
+        <tr>
+            <td>51</td>
+            <td>AAPL</td>
+            <td>2863</td>
+            <td>199,223</td>
+            <td class="cell-green5">33.6</td>
+            <td class="cell-moccasin">10.97</td>
+            <td class="cell-lightgreen">3.1</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>46.4</td>
+            <td>29.6</td>
+            <td>1.24</td>
+            <td>9.79</td>
+            <td>6.14</td>
+            <td>62.9</td>
+        </tr>
+        <tr>
+            <td>52</td>
+            <td>AAPL</td>
+            <td>2321</td>
+            <td>212,464</td>
+            <td class="cell-green5">35.9</td>
+            <td class="cell-moccasin">12.38</td>
+            <td class="cell-lightgreen">2.9</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>39.8</td>
+            <td>31.9</td>
+            <td>1.29</td>
+            <td>9.43</td>
+            <td>7.02</td>
+            <td>62.6</td>
+        </tr>
+        <tr>
+            <td>53</td>
+            <td>AAPL</td>
+            <td>2925</td>
+            <td>212,705</td>
+            <td class="cell-green5">35.9</td>
+            <td class="cell-moccasin">12.24</td>
+            <td class="cell-lightgreen">2.9</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>46.4</td>
+            <td>30.1</td>
+            <td>1.26</td>
+            <td>10.16</td>
+            <td>6.66</td>
+            <td>62.4</td>
+        </tr>
+        <tr>
+            <td>54</td>
+            <td>AAPL</td>
+            <td>2926</td>
+            <td>229,053</td>
+            <td class="cell-green5">38.7</td>
+            <td class="cell-moccasin">14.24</td>
+            <td class="cell-lightgreen">2.7</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>33.7</td>
+            <td>33.7</td>
+            <td>1.35</td>
+            <td>9.67</td>
+            <td>7.84</td>
+            <td>62.3</td>
+        </tr>
+        <tr>
+            <td>55</td>
+            <td>AAPL</td>
+            <td>2570</td>
+            <td>229,058</td>
+            <td class="cell-green5">38.7</td>
+            <td class="cell-moccasin">14.24</td>
+            <td class="cell-lightgreen">2.7</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>33.7</td>
+            <td>33.7</td>
+            <td>1.35</td>
+            <td>9.67</td>
+            <td>7.84</td>
+            <td>62.3</td>
+        </tr>
+        <tr>
+            <td>56</td>
+            <td>AAPL</td>
+            <td>2001</td>
+            <td>212,064</td>
+            <td class="cell-green5">35.8</td>
+            <td class="cell-moccasin">12.26</td>
+            <td class="cell-lightgreen">2.9</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>46.4</td>
+            <td>30.1</td>
+            <td>1.26</td>
+            <td>10.15</td>
+            <td>6.63</td>
+            <td>62.1</td>
+        </tr>
+        <tr>
+            <td>57</td>
+            <td>AAPL</td>
+            <td>2337</td>
+            <td>257,709</td>
+            <td class="cell-green5">43.5</td>
+            <td class="cell-moccasin">13.86</td>
+            <td class="cell-lightgreen">3.1</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>66.5</td>
+            <td>28.1</td>
+            <td>1.21</td>
+            <td>10.24</td>
+            <td>4.94</td>
+            <td>61.6</td>
+        </tr>
+        <tr>
+            <td>58</td>
+            <td>AAPL</td>
+            <td>3033</td>
+            <td>226,863</td>
+            <td class="cell-green5">38.3</td>
+            <td class="cell-moccasin">14.31</td>
+            <td class="cell-lightgreen">2.7</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>33.7</td>
+            <td>33.7</td>
+            <td>1.35</td>
+            <td>9.41</td>
+            <td>7.82</td>
+            <td>61.6</td>
+        </tr>
+        <tr>
+            <td>59</td>
+            <td>AAPL</td>
+            <td>2730</td>
+            <td>219,329</td>
+            <td class="cell-green5">37.0</td>
+            <td class="cell-moccasin">14.02</td>
+            <td class="cell-lightgreen">2.6</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>33.7</td>
+            <td>33.4</td>
+            <td>1.33</td>
+            <td>10.26</td>
+            <td>7.55</td>
+            <td>60.7</td>
+        </tr>
+        <tr>
+            <td>60</td>
+            <td>AAPL</td>
+            <td>3004</td>
+            <td>218,772</td>
+            <td class="cell-green5">37.0</td>
+            <td class="cell-moccasin">14.02</td>
+            <td class="cell-lightgreen">2.6</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>33.7</td>
+            <td>33.4</td>
+            <td>1.33</td>
+            <td>10.26</td>
+            <td>7.53</td>
+            <td>60.5</td>
+        </tr>
+        <tr>
+            <td>61</td>
+            <td>AAPL</td>
+            <td>2002</td>
+            <td>263,187</td>
+            <td class="cell-green5">44.5</td>
+            <td class="cell-moccasin">14.43</td>
+            <td class="cell-lightgreen">3.1</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>66.5</td>
+            <td>28.0</td>
+            <td>1.22</td>
+            <td>10.13</td>
+            <td>5.00</td>
+            <td>60.5</td>
+        </tr>
+        <tr>
+            <td>62</td>
+            <td>AAPL</td>
+            <td>2193</td>
+            <td>263,187</td>
+            <td class="cell-green5">44.5</td>
+            <td class="cell-moccasin">14.43</td>
+            <td class="cell-lightgreen">3.1</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>66.5</td>
+            <td>28.0</td>
+            <td>1.22</td>
+            <td>10.13</td>
+            <td>5.00</td>
+            <td>60.5</td>
+        </tr>
+        <tr>
+            <td>63</td>
+            <td>AAPL</td>
+            <td>2781</td>
+            <td>204,868</td>
+            <td class="cell-green5">34.6</td>
+            <td class="cell-moccasin">12.08</td>
+            <td class="cell-lightgreen">2.9</td>
+            <td class="cell-lightgreen">0.97</td>
+            <td>39.8</td>
+            <td>31.7</td>
+            <td>1.28</td>
+            <td>9.21</td>
+            <td>6.81</td>
+            <td>60.2</td>
+        </tr>
+        <tr>
+            <td>64</td>
+            <td>AAPL</td>
+            <td>2087</td>
+            <td>237,566</td>
+            <td class="cell-green5">40.1</td>
+            <td class="cell-moccasin">12.81</td>
+            <td class="cell-lightgreen">3.1</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>66.5</td>
+            <td>28.4</td>
+            <td>1.20</td>
+            <td>9.95</td>
+            <td>4.81</td>
+            <td>60.2</td>
+        </tr>
+        <tr>
+            <td>65</td>
+            <td>AAPL</td>
+            <td>2935</td>
+            <td>209,868</td>
+            <td class="cell-green5">35.4</td>
+            <td class="cell-moccasin">12.21</td>
+            <td class="cell-lightgreen">2.9</td>
+            <td class="cell-lightgreen">0.97</td>
+            <td>39.8</td>
+            <td>31.3</td>
+            <td>1.28</td>
+            <td>8.81</td>
+            <td>6.82</td>
+            <td>60.2</td>
+        </tr>
+        <tr>
+            <td>66</td>
+            <td>AAPL</td>
+            <td>2998</td>
+            <td>212,776</td>
+            <td class="cell-green5">35.9</td>
+            <td class="cell-moccasin">12.48</td>
+            <td class="cell-lightgreen">2.9</td>
+            <td class="cell-lightgreen">0.97</td>
+            <td>46.4</td>
+            <td>30.0</td>
+            <td>1.26</td>
+            <td>9.93</td>
+            <td>6.51</td>
+            <td>60.0</td>
+        </tr>
+        <tr>
+            <td>67</td>
+            <td>AAPL</td>
+            <td>2668</td>
+            <td>209,738</td>
+            <td class="cell-green5">35.4</td>
+            <td class="cell-moccasin">12.44</td>
+            <td class="cell-lightgreen">2.8</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>46.4</td>
+            <td>30.2</td>
+            <td>1.26</td>
+            <td>9.86</td>
+            <td>6.48</td>
+            <td>59.8</td>
+        </tr>
+        <tr>
+            <td>68</td>
+            <td>AAPL</td>
+            <td>2614</td>
+            <td>258,881</td>
+            <td class="cell-green5">43.7</td>
+            <td class="cell-moccasin">14.78</td>
+            <td class="cell-lightgreen">3.0</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>57.1</td>
+            <td>29.6</td>
+            <td>1.24</td>
+            <td>9.90</td>
+            <td>5.18</td>
+            <td>59.3</td>
+        </tr>
+        <tr>
+            <td>69</td>
+            <td>AAPL</td>
+            <td>2568</td>
+            <td>246,137</td>
+            <td class="cell-green5">41.6</td>
+            <td class="cell-moccasin">14.18</td>
+            <td class="cell-lightgreen">2.9</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>49.2</td>
+            <td>31.4</td>
+            <td>1.24</td>
+            <td>9.01</td>
+            <td>5.48</td>
+            <td>59.2</td>
+        </tr>
+        <tr>
+            <td>70</td>
+            <td>AAPL</td>
+            <td>2322</td>
+            <td>247,528</td>
+            <td class="cell-green5">41.8</td>
+            <td class="cell-moccasin">13.84</td>
+            <td class="cell-lightgreen">3.0</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>66.5</td>
+            <td>28.5</td>
+            <td>1.21</td>
+            <td>9.98</td>
+            <td>4.90</td>
+            <td>59.1</td>
+        </tr>
+        <tr>
+            <td>71</td>
+            <td>AAPL</td>
+            <td>2809</td>
+            <td>217,232</td>
+            <td class="cell-green5">36.7</td>
+            <td class="cell-moccasin">14.19</td>
+            <td class="cell-lightgreen">2.6</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>33.7</td>
+            <td>33.5</td>
+            <td>1.33</td>
+            <td>9.61</td>
+            <td>7.33</td>
+            <td>58.7</td>
+        </tr>
+        <tr>
+            <td>72</td>
+            <td>AAPL</td>
+            <td>2972</td>
+            <td>212,780</td>
+            <td class="cell-green5">35.9</td>
+            <td class="cell-moccasin">13.93</td>
+            <td class="cell-lightgreen">2.6</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>33.7</td>
+            <td>33.2</td>
+            <td>1.32</td>
+            <td>9.83</td>
+            <td>7.39</td>
+            <td>58.3</td>
+        </tr>
+        <tr>
+            <td>73</td>
+            <td>AAPL</td>
+            <td>2540</td>
+            <td>253,235</td>
+            <td class="cell-green5">42.8</td>
+            <td class="cell-moccasin">14.75</td>
+            <td class="cell-lightgreen">2.9</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>57.1</td>
+            <td>29.5</td>
+            <td>1.23</td>
+            <td>9.70</td>
+            <td>5.12</td>
+            <td>57.6</td>
+        </tr>
+        <tr>
+            <td>74</td>
+            <td>AAPL</td>
+            <td>2822</td>
+            <td>207,095</td>
+            <td class="cell-green5">35.0</td>
+            <td class="cell-moccasin">12.63</td>
+            <td class="cell-lightgreen">2.8</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>46.4</td>
+            <td>29.5</td>
+            <td>1.25</td>
+            <td>9.93</td>
+            <td>6.30</td>
+            <td>57.6</td>
+        </tr>
+        <tr>
+            <td>75</td>
+            <td>AAPL</td>
+            <td>2663</td>
+            <td>207,071</td>
+            <td class="cell-green5">35.0</td>
+            <td class="cell-moccasin">12.63</td>
+            <td class="cell-lightgreen">2.8</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>46.4</td>
+            <td>29.5</td>
+            <td>1.25</td>
+            <td>9.93</td>
+            <td>6.30</td>
+            <td>57.5</td>
+        </tr>
+        <tr>
+            <td>76</td>
+            <td>AAPL</td>
+            <td>2813</td>
+            <td>230,593</td>
+            <td class="cell-green5">38.9</td>
+            <td class="cell-moccasin">13.29</td>
+            <td class="cell-lightgreen">2.9</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>66.5</td>
+            <td>28.6</td>
+            <td>1.20</td>
+            <td>10.30</td>
+            <td>4.71</td>
+            <td>57.5</td>
+        </tr>
+        <tr>
+            <td>77</td>
+            <td>AAPL</td>
+            <td>2641</td>
+            <td>210,423</td>
+            <td class="cell-green5">35.5</td>
+            <td class="cell-moccasin">13.31</td>
+            <td class="cell-lightgreen">2.7</td>
+            <td class="cell-lightgreen">0.97</td>
+            <td>39.8</td>
+            <td>31.7</td>
+            <td>1.28</td>
+            <td>9.55</td>
+            <td>6.95</td>
+            <td>57.2</td>
+        </tr>
+        <tr>
+            <td>78</td>
+            <td>AAPL</td>
+            <td>2923</td>
+            <td>205,235</td>
+            <td class="cell-green5">34.7</td>
+            <td class="cell-moccasin">12.58</td>
+            <td class="cell-lightgreen">2.8</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>46.4</td>
+            <td>29.7</td>
+            <td>1.25</td>
+            <td>9.78</td>
+            <td>6.29</td>
+            <td>57.2</td>
+        </tr>
+        <tr>
+            <td>79</td>
+            <td>AAPL</td>
+            <td>2519</td>
+            <td>201,273</td>
+            <td class="cell-green5">34.0</td>
+            <td class="cell-moccasin">12.42</td>
+            <td class="cell-lightgreen">2.7</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>46.4</td>
+            <td>30.2</td>
+            <td>1.25</td>
+            <td>9.55</td>
+            <td>6.40</td>
+            <td>57.0</td>
+        </tr>
+        <tr>
+            <td>80</td>
+            <td>AAPL</td>
+            <td>2964</td>
+            <td>201,273</td>
+            <td class="cell-green5">34.0</td>
+            <td class="cell-moccasin">12.42</td>
+            <td class="cell-lightgreen">2.7</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>46.4</td>
+            <td>30.2</td>
+            <td>1.25</td>
+            <td>9.55</td>
+            <td>6.40</td>
+            <td>57.0</td>
+        </tr>
+        <tr>
+            <td>81</td>
+            <td>AAPL</td>
+            <td>2553</td>
+            <td>204,864</td>
+            <td class="cell-green5">34.6</td>
+            <td class="cell-moccasin">12.66</td>
+            <td class="cell-lightgreen">2.7</td>
+            <td class="cell-lightgreen">0.97</td>
+            <td>39.8</td>
+            <td>31.3</td>
+            <td>1.27</td>
+            <td>8.65</td>
+            <td>6.70</td>
+            <td>56.4</td>
+        </tr>
+        <tr>
+            <td>82</td>
+            <td>AAPL</td>
+            <td>3000</td>
+            <td>204,864</td>
+            <td class="cell-green5">34.6</td>
+            <td class="cell-moccasin">12.66</td>
+            <td class="cell-lightgreen">2.7</td>
+            <td class="cell-lightgreen">0.97</td>
+            <td>39.8</td>
+            <td>31.3</td>
+            <td>1.27</td>
+            <td>8.65</td>
+            <td>6.70</td>
+            <td>56.4</td>
+        </tr>
+        <tr>
+            <td>83</td>
+            <td>AAPL</td>
+            <td>2537</td>
+            <td>244,312</td>
+            <td class="cell-green5">41.3</td>
+            <td class="cell-moccasin">14.16</td>
+            <td class="cell-lightgreen">2.9</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>66.5</td>
+            <td>27.9</td>
+            <td>1.21</td>
+            <td>10.28</td>
+            <td>4.76</td>
+            <td>56.4</td>
+        </tr>
+        <tr>
+            <td>84</td>
+            <td>AAPL</td>
+            <td>2794</td>
+            <td>211,716</td>
+            <td class="cell-green5">35.8</td>
+            <td class="cell-moccasin">14.26</td>
+            <td class="cell-lightgreen">2.5</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>33.7</td>
+            <td>33.8</td>
+            <td>1.33</td>
+            <td>9.00</td>
+            <td>7.59</td>
+            <td>56.3</td>
+        </tr>
+        <tr>
+            <td>85</td>
+            <td>AAPL</td>
+            <td>2963</td>
+            <td>211,716</td>
+            <td class="cell-green5">35.8</td>
+            <td class="cell-moccasin">14.26</td>
+            <td class="cell-lightgreen">2.5</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>33.7</td>
+            <td>33.8</td>
+            <td>1.33</td>
+            <td>9.00</td>
+            <td>7.59</td>
+            <td>56.3</td>
+        </tr>
+        <tr>
+            <td>86</td>
+            <td>AAPL</td>
+            <td>2030</td>
+            <td>227,935</td>
+            <td class="cell-green5">38.5</td>
+            <td class="cell-moccasin">12.84</td>
+            <td class="cell-lightgreen">3.0</td>
+            <td class="cell-lightgreen">0.97</td>
+            <td>66.5</td>
+            <td>28.9</td>
+            <td>1.20</td>
+            <td>9.30</td>
+            <td>4.54</td>
+            <td>55.8</td>
+        </tr>
+        <tr>
+            <td>87</td>
+            <td>AAPL</td>
+            <td>2862</td>
+            <td>215,656</td>
+            <td class="cell-green5">36.4</td>
+            <td class="cell-moccasin">14.62</td>
+            <td class="cell-lightgreen">2.5</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>33.7</td>
+            <td>33.1</td>
+            <td>1.33</td>
+            <td>9.28</td>
+            <td>7.24</td>
+            <td>55.3</td>
+        </tr>
+        <tr>
+            <td>88</td>
+            <td>AAPL</td>
+            <td>2870</td>
+            <td>202,553</td>
+            <td class="cell-green5">34.2</td>
+            <td class="cell-moccasin">12.72</td>
+            <td class="cell-lightgreen">2.7</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>46.4</td>
+            <td>29.6</td>
+            <td>1.24</td>
+            <td>9.47</td>
+            <td>6.26</td>
+            <td>55.3</td>
+        </tr>
+        <tr>
+            <td>89</td>
+            <td>AAPL</td>
+            <td>2766</td>
+            <td>242,015</td>
+            <td class="cell-green5">40.9</td>
+            <td class="cell-moccasin">14.21</td>
+            <td class="cell-lightgreen">2.9</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>66.5</td>
+            <td>27.9</td>
+            <td>1.20</td>
+            <td>10.08</td>
+            <td>4.72</td>
+            <td>55.3</td>
+        </tr>
+        <tr>
+            <td>90</td>
+            <td>AAPL</td>
+            <td>2638</td>
+            <td>209,935</td>
+            <td class="cell-green5">35.5</td>
+            <td class="cell-moccasin">14.33</td>
+            <td class="cell-lightgreen">2.5</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>33.7</td>
+            <td>33.8</td>
+            <td>1.32</td>
+            <td>8.77</td>
+            <td>7.57</td>
+            <td>55.2</td>
+        </tr>
+        <tr>
+            <td>91</td>
+            <td>AAPL</td>
+            <td>2844</td>
+            <td>234,861</td>
+            <td class="cell-green5">39.7</td>
+            <td class="cell-moccasin">14.45</td>
+            <td class="cell-lightgreen">2.7</td>
+            <td class="cell-lightgreen">0.99</td>
+            <td>49.2</td>
+            <td>31.9</td>
+            <td>1.24</td>
+            <td>8.68</td>
+            <td>5.38</td>
+            <td>55.1</td>
+        </tr>
+        <tr>
+            <td>92</td>
+            <td>AAPL</td>
+            <td>2566</td>
+            <td>210,750</td>
+            <td class="cell-green5">35.6</td>
+            <td class="cell-moccasin">14.49</td>
+            <td class="cell-lightgreen">2.5</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>33.7</td>
+            <td>33.3</td>
+            <td>1.32</td>
+            <td>9.17</td>
+            <td>7.12</td>
+            <td>54.3</td>
+        </tr>
+        <tr>
+            <td>93</td>
+            <td>AAPL</td>
+            <td>2965</td>
+            <td>243,182</td>
+            <td class="cell-green5">41.1</td>
+            <td class="cell-moccasin">14.54</td>
+            <td class="cell-lightgreen">2.8</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>66.5</td>
+            <td>28.2</td>
+            <td>1.20</td>
+            <td>9.77</td>
+            <td>4.77</td>
+            <td>54.1</td>
+        </tr>
+        <tr>
+            <td>94</td>
+            <td>AAPL</td>
+            <td>2669</td>
+            <td>202,519</td>
+            <td class="cell-green5">34.2</td>
+            <td class="cell-moccasin">14.19</td>
+            <td class="cell-lightgreen">2.4</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>33.7</td>
+            <td>33.6</td>
+            <td>1.31</td>
+            <td>9.07</td>
+            <td>7.12</td>
+            <td>53.3</td>
+        </tr>
+        <tr>
+            <td>95</td>
+            <td>AAPL</td>
+            <td>2924</td>
+            <td>202,519</td>
+            <td class="cell-green5">34.2</td>
+            <td class="cell-moccasin">14.19</td>
+            <td class="cell-lightgreen">2.4</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>33.7</td>
+            <td>33.6</td>
+            <td>1.31</td>
+            <td>9.07</td>
+            <td>7.12</td>
+            <td>53.3</td>
+        </tr>
+        <tr>
+            <td>96</td>
+            <td>AAPL</td>
+            <td>2709</td>
+            <td>210,223</td>
+            <td class="cell-green5">35.5</td>
+            <td class="cell-moccasin">14.95</td>
+            <td class="cell-lightgreen">2.4</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>33.7</td>
+            <td>33.7</td>
+            <td>1.33</td>
+            <td>8.85</td>
+            <td>7.32</td>
+            <td>52.8</td>
+        </tr>
+        <tr>
+            <td>97</td>
+            <td>AAPL</td>
+            <td>3067</td>
+            <td>210,223</td>
+            <td class="cell-green5">35.5</td>
+            <td class="cell-moccasin">14.95</td>
+            <td class="cell-lightgreen">2.4</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>33.7</td>
+            <td>33.7</td>
+            <td>1.33</td>
+            <td>8.85</td>
+            <td>7.32</td>
+            <td>52.8</td>
+        </tr>
+        <tr>
+            <td>98</td>
+            <td>AAPL</td>
+            <td>2329</td>
+            <td>193,869</td>
+            <td class="cell-green5">32.7</td>
+            <td class="cell-moccasin">12.02</td>
+            <td class="cell-lightgreen">2.7</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>52.4</td>
+            <td>29.3</td>
+            <td>1.22</td>
+            <td>7.36</td>
+            <td>6.16</td>
+            <td>52.4</td>
+        </tr>
+        <tr>
+            <td>99</td>
+            <td>AAPL</td>
+            <td>2875</td>
+            <td>193,869</td>
+            <td class="cell-green5">32.7</td>
+            <td class="cell-moccasin">12.02</td>
+            <td class="cell-lightgreen">2.7</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>52.4</td>
+            <td>29.3</td>
+            <td>1.22</td>
+            <td>7.36</td>
+            <td>6.16</td>
+            <td>52.4</td>
+        </tr>
+        <tr>
+            <td>100</td>
+            <td>AAPL</td>
+            <td>2500</td>
+            <td>186,352</td>
+            <td class="cell-green5">31.5</td>
+            <td class="cell-moccasin">12.41</td>
+            <td class="cell-lightgreen">2.5</td>
+            <td class="cell-lightgreen">0.98</td>
+            <td>46.4</td>
+            <td>30.3</td>
+            <td>1.24</td>
+            <td>9.51</td>
+            <td>6.00</td>
+            <td>52.2</td>
+        </tr>
+        <tr>
+            <td>101</td>
+            <td>AMZN</td>
+            <td>1947</td>
+            <td>590,970</td>
+            <td class="cell-green5">99.8</td>
+            <td class="cell-moccasin">11.76</td>
+            <td class="cell-lightgreen">8.5</td>
+            <td class="cell-lightgreen">0.90</td>
+            <td>131.3</td>
+            <td>25.0</td>
+            <td>1.17</td>
+            <td>7.34</td>
+            <td>3.88</td>
+            <td>64.2</td>
+        </tr>
+        <tr>
+            <td>102</td>
+            <td>AMZN</td>
+            <td>2046</td>
+            <td>590,970</td>
+            <td class="cell-green5">99.8</td>
+            <td class="cell-moccasin">11.76</td>
+            <td class="cell-lightgreen">8.5</td>
+            <td class="cell-lightgreen">0.90</td>
+            <td>131.3</td>
+            <td>25.0</td>
+            <td>1.17</td>
+            <td>7.34</td>
+            <td>3.88</td>
+            <td>64.2</td>
+        </tr>
+        <tr>
+            <td>103</td>
+            <td>AMZN</td>
+            <td>2069</td>
+            <td>590,970</td>
+            <td class="cell-green5">99.8</td>
+            <td class="cell-moccasin">11.76</td>
+            <td class="cell-lightgreen">8.5</td>
+            <td class="cell-lightgreen">0.90</td>
+            <td>131.3</td>
+            <td>25.0</td>
+            <td>1.17</td>
+            <td>7.34</td>
+            <td>3.88</td>
+            <td>64.2</td>
+        </tr>
+        <tr>
+            <td>104</td>
+            <td>AMZN</td>
+            <td>2318</td>
+            <td>590,970</td>
+            <td class="cell-green5">99.8</td>
+            <td class="cell-moccasin">11.76</td>
+            <td class="cell-lightgreen">8.5</td>
+            <td class="cell-lightgreen">0.90</td>
+            <td>131.3</td>
+            <td>25.0</td>
+            <td>1.17</td>
+            <td>7.34</td>
+            <td>3.88</td>
+            <td>64.2</td>
+        </tr>
+        <tr>
+            <td>105</td>
+            <td>AMZN</td>
+            <td>2403</td>
+            <td>590,970</td>
+            <td class="cell-green5">99.8</td>
+            <td class="cell-moccasin">11.76</td>
+            <td class="cell-lightgreen">8.5</td>
+            <td class="cell-lightgreen">0.90</td>
+            <td>131.3</td>
+            <td>25.0</td>
+            <td>1.17</td>
+            <td>7.34</td>
+            <td>3.88</td>
+            <td>64.2</td>
+        </tr>
+        <tr>
+            <td>106</td>
+            <td>AMZN</td>
+            <td>2492</td>
+            <td>590,970</td>
+            <td class="cell-green5">99.8</td>
+            <td class="cell-moccasin">11.76</td>
+            <td class="cell-lightgreen">8.5</td>
+            <td class="cell-lightgreen">0.90</td>
+            <td>131.3</td>
+            <td>25.0</td>
+            <td>1.17</td>
+            <td>7.34</td>
+            <td>3.88</td>
+            <td>64.2</td>
+        </tr>
+        <tr>
+            <td>107</td>
+            <td>AMZN</td>
+            <td>1449</td>
+            <td>606,289</td>
+            <td class="cell-green5">102.4</td>
+            <td class="cell-moccasin">12.28</td>
+            <td class="cell-lightgreen">8.3</td>
+            <td class="cell-lightgreen">0.90</td>
+            <td>131.2</td>
+            <td>25.0</td>
+            <td>1.17</td>
+            <td>6.93</td>
+            <td>4.01</td>
+            <td>62.5</td>
+        </tr>
+        <tr>
+            <td>108</td>
+            <td>AMZN</td>
+            <td>1725</td>
+            <td>606,289</td>
+            <td class="cell-green5">102.4</td>
+            <td class="cell-moccasin">12.28</td>
+            <td class="cell-lightgreen">8.3</td>
+            <td class="cell-lightgreen">0.90</td>
+            <td>131.2</td>
+            <td>25.0</td>
+            <td>1.17</td>
+            <td>6.93</td>
+            <td>4.01</td>
+            <td>62.5</td>
+        </tr>
+        <tr>
+            <td>109</td>
+            <td>AMZN</td>
+            <td>2110</td>
+            <td>606,289</td>
+            <td class="cell-green5">102.4</td>
+            <td class="cell-moccasin">12.28</td>
+            <td class="cell-lightgreen">8.3</td>
+            <td class="cell-lightgreen">0.90</td>
+            <td>131.2</td>
+            <td>25.0</td>
+            <td>1.17</td>
+            <td>6.93</td>
+            <td>4.01</td>
+            <td>62.5</td>
+        </tr>
+        <tr>
+            <td>110</td>
+            <td>AMZN</td>
+            <td>2201</td>
+            <td>606,289</td>
+            <td class="cell-green5">102.4</td>
+            <td class="cell-moccasin">12.28</td>
+            <td class="cell-lightgreen">8.3</td>
+            <td class="cell-lightgreen">0.90</td>
+            <td>131.2</td>
+            <td>25.0</td>
+            <td>1.17</td>
+            <td>6.93</td>
+            <td>4.01</td>
+            <td>62.5</td>
+        </tr>
+        <tr>
+            <td>111</td>
+            <td>AMZN</td>
+            <td>2221</td>
+            <td>606,289</td>
+            <td class="cell-green5">102.4</td>
+            <td class="cell-moccasin">12.28</td>
+            <td class="cell-lightgreen">8.3</td>
+            <td class="cell-lightgreen">0.90</td>
+            <td>131.2</td>
+            <td>25.0</td>
+            <td>1.17</td>
+            <td>6.93</td>
+            <td>4.01</td>
+            <td>62.5</td>
+        </tr>
+        <tr>
+            <td>112</td>
+            <td>AMZN</td>
+            <td>2243</td>
+            <td>606,289</td>
+            <td class="cell-green5">102.4</td>
+            <td class="cell-moccasin">12.28</td>
+            <td class="cell-lightgreen">8.3</td>
+            <td class="cell-lightgreen">0.90</td>
+            <td>131.2</td>
+            <td>25.0</td>
+            <td>1.17</td>
+            <td>6.93</td>
+            <td>4.01</td>
+            <td>62.5</td>
+        </tr>
+        <tr>
+            <td>113</td>
+            <td>AMZN</td>
+            <td>2295</td>
+            <td>606,289</td>
+            <td class="cell-green5">102.4</td>
+            <td class="cell-moccasin">12.28</td>
+            <td class="cell-lightgreen">8.3</td>
+            <td class="cell-lightgreen">0.90</td>
+            <td>131.2</td>
+            <td>25.0</td>
+            <td>1.17</td>
+            <td>6.93</td>
+            <td>4.01</td>
+            <td>62.5</td>
+        </tr>
+        <tr>
+            <td>114</td>
+            <td>AMZN</td>
+            <td>2369</td>
+            <td>606,289</td>
+            <td class="cell-green5">102.4</td>
+            <td class="cell-moccasin">12.28</td>
+            <td class="cell-lightgreen">8.3</td>
+            <td class="cell-lightgreen">0.90</td>
+            <td>131.2</td>
+            <td>25.0</td>
+            <td>1.17</td>
+            <td>6.93</td>
+            <td>4.01</td>
+            <td>62.5</td>
+        </tr>
+        <tr>
+            <td>115</td>
+            <td>AMZN</td>
+            <td>2317</td>
+            <td>573,073</td>
+            <td class="cell-green5">96.8</td>
+            <td class="cell-moccasin">13.08</td>
+            <td class="cell-lightgreen">7.4</td>
+            <td class="cell-lightgreen">0.91</td>
+            <td>131.3</td>
+            <td>24.5</td>
+            <td>1.16</td>
+            <td>8.05</td>
+            <td>3.77</td>
+            <td>57.7</td>
+        </tr>
+        <tr>
+            <td>116</td>
+            <td>AMZN</td>
+            <td>2423</td>
+            <td>573,073</td>
+            <td class="cell-green5">96.8</td>
+            <td class="cell-moccasin">13.08</td>
+            <td class="cell-lightgreen">7.4</td>
+            <td class="cell-lightgreen">0.91</td>
+            <td>131.3</td>
+            <td>24.5</td>
+            <td>1.16</td>
+            <td>8.05</td>
+            <td>3.77</td>
+            <td>57.7</td>
+        </tr>
+        <tr>
+            <td>117</td>
+            <td>AMZN</td>
+            <td>2456</td>
+            <td>573,073</td>
+            <td class="cell-green5">96.8</td>
+            <td class="cell-moccasin">13.08</td>
+            <td class="cell-lightgreen">7.4</td>
+            <td class="cell-lightgreen">0.91</td>
+            <td>131.3</td>
+            <td>24.5</td>
+            <td>1.16</td>
+            <td>8.05</td>
+            <td>3.77</td>
+            <td>57.7</td>
+        </tr>
+        <tr>
+            <td>118</td>
+            <td>AMZN</td>
+            <td>1104</td>
+            <td>555,964</td>
+            <td class="cell-green5">93.9</td>
+            <td class="cell-moccasin">12.66</td>
+            <td class="cell-lightgreen">7.4</td>
+            <td class="cell-moccasin">0.87</td>
+            <td>108.1</td>
+            <td>25.7</td>
+            <td>1.17</td>
+            <td>6.16</td>
+            <td>3.87</td>
+            <td>52.3</td>
+        </tr>
+        <tr>
+            <td>119</td>
+            <td>AMZN</td>
+            <td>1464</td>
+            <td>555,964</td>
+            <td class="cell-green5">93.9</td>
+            <td class="cell-moccasin">12.66</td>
+            <td class="cell-lightgreen">7.4</td>
+            <td class="cell-moccasin">0.87</td>
+            <td>108.1</td>
+            <td>25.7</td>
+            <td>1.17</td>
+            <td>6.16</td>
+            <td>3.87</td>
+            <td>52.3</td>
+        </tr>
+        <tr>
+            <td>120</td>
+            <td>AMZN</td>
+            <td>1957</td>
+            <td>555,964</td>
+            <td class="cell-green5">93.9</td>
+            <td class="cell-moccasin">12.66</td>
+            <td class="cell-lightgreen">7.4</td>
+            <td class="cell-moccasin">0.87</td>
+            <td>108.1</td>
+            <td>25.7</td>
+            <td>1.17</td>
+            <td>6.16</td>
+            <td>3.87</td>
+            <td>52.3</td>
+        </tr>
+        <tr>
+            <td>121</td>
+            <td>AMZN</td>
+            <td>2045</td>
+            <td>555,964</td>
+            <td class="cell-green5">93.9</td>
+            <td class="cell-moccasin">12.66</td>
+            <td class="cell-lightgreen">7.4</td>
+            <td class="cell-moccasin">0.87</td>
+            <td>108.1</td>
+            <td>25.7</td>
+            <td>1.17</td>
+            <td>6.16</td>
+            <td>3.87</td>
+            <td>52.3</td>
+        </tr>
+        <tr>
+            <td>122</td>
+            <td>AMZN</td>
+            <td>2108</td>
+            <td>555,964</td>
+            <td class="cell-green5">93.9</td>
+            <td class="cell-moccasin">12.66</td>
+            <td class="cell-lightgreen">7.4</td>
+            <td class="cell-moccasin">0.87</td>
+            <td>108.1</td>
+            <td>25.7</td>
+            <td>1.17</td>
+            <td>6.16</td>
+            <td>3.87</td>
+            <td>52.3</td>
+        </tr>
+        <tr>
+            <td>123</td>
+            <td>AMZN</td>
+            <td>2339</td>
+            <td>555,964</td>
+            <td class="cell-green5">93.9</td>
+            <td class="cell-moccasin">12.66</td>
+            <td class="cell-lightgreen">7.4</td>
+            <td class="cell-moccasin">0.87</td>
+            <td>108.1</td>
+            <td>25.7</td>
+            <td>1.17</td>
+            <td>6.16</td>
+            <td>3.87</td>
+            <td>52.3</td>
+        </tr>
+        <tr>
+            <td>124</td>
+            <td>AMZN</td>
+            <td>2285</td>
+            <td>543,554</td>
+            <td class="cell-green5">91.8</td>
+            <td class="cell-moccasin">12.54</td>
+            <td class="cell-lightgreen">7.3</td>
+            <td class="cell-moccasin">0.88</td>
+            <td>131.3</td>
+            <td>25.1</td>
+            <td>1.15</td>
+            <td>6.54</td>
+            <td>3.72</td>
+            <td>52.3</td>
+        </tr>
+        <tr>
+            <td>125</td>
+            <td>AMZN</td>
+            <td>1814</td>
+            <td>530,962</td>
+            <td class="cell-green5">89.7</td>
+            <td class="cell-moccasin">13.12</td>
+            <td class="cell-lightgreen">6.8</td>
+            <td class="cell-moccasin">0.89</td>
+            <td>131.3</td>
+            <td>24.6</td>
+            <td>1.15</td>
+            <td>6.88</td>
+            <td>3.68</td>
+            <td>49.7</td>
+        </tr>
+        <tr>
+            <td>126</td>
+            <td>AMZN</td>
+            <td>1886</td>
+            <td>530,962</td>
+            <td class="cell-green5">89.7</td>
+            <td class="cell-moccasin">13.12</td>
+            <td class="cell-lightgreen">6.8</td>
+            <td class="cell-moccasin">0.89</td>
+            <td>131.3</td>
+            <td>24.6</td>
+            <td>1.15</td>
+            <td>6.88</td>
+            <td>3.68</td>
+            <td>49.7</td>
+        </tr>
+        <tr>
+            <td>127</td>
+            <td>AMZN</td>
+            <td>2116</td>
+            <td>530,962</td>
+            <td class="cell-green5">89.7</td>
+            <td class="cell-moccasin">13.12</td>
+            <td class="cell-lightgreen">6.8</td>
+            <td class="cell-moccasin">0.89</td>
+            <td>131.3</td>
+            <td>24.6</td>
+            <td>1.15</td>
+            <td>6.88</td>
+            <td>3.68</td>
+            <td>49.7</td>
+        </tr>
+        <tr>
+            <td>128</td>
+            <td>AMZN</td>
+            <td>2287</td>
+            <td>550,331</td>
+            <td class="cell-green5">93.0</td>
+            <td class="cell-moccasin">13.91</td>
+            <td class="cell-lightgreen">6.7</td>
+            <td class="cell-moccasin">0.89</td>
+            <td>131.2</td>
+            <td>25.0</td>
+            <td>1.16</td>
+            <td>6.22</td>
+            <td>3.79</td>
+            <td>47.8</td>
+        </tr>
+        <tr>
+            <td>129</td>
+            <td>AMZN</td>
+            <td>2310</td>
+            <td>550,331</td>
+            <td class="cell-green5">93.0</td>
+            <td class="cell-moccasin">13.91</td>
+            <td class="cell-lightgreen">6.7</td>
+            <td class="cell-moccasin">0.89</td>
+            <td>131.2</td>
+            <td>25.0</td>
+            <td>1.16</td>
+            <td>6.22</td>
+            <td>3.79</td>
+            <td>47.8</td>
+        </tr>
+        <tr>
+            <td>130</td>
+            <td>AMZN</td>
+            <td>2401</td>
+            <td>550,331</td>
+            <td class="cell-green5">93.0</td>
+            <td class="cell-moccasin">13.91</td>
+            <td class="cell-lightgreen">6.7</td>
+            <td class="cell-moccasin">0.89</td>
+            <td>131.2</td>
+            <td>25.0</td>
+            <td>1.16</td>
+            <td>6.22</td>
+            <td>3.79</td>
+            <td>47.8</td>
+        </tr>
+        <tr>
+            <td>131</td>
+            <td>AMZN</td>
+            <td>2418</td>
+            <td>550,331</td>
+            <td class="cell-green5">93.0</td>
+            <td class="cell-moccasin">13.91</td>
+            <td class="cell-lightgreen">6.7</td>
+            <td class="cell-moccasin">0.89</td>
+            <td>131.2</td>
+            <td>25.0</td>
+            <td>1.16</td>
+            <td>6.22</td>
+            <td>3.79</td>
+            <td>47.8</td>
+        </tr>
+        <tr>
+            <td>132</td>
+            <td>AMZN</td>
+            <td>2266</td>
+            <td>531,457</td>
+            <td class="cell-green5">89.8</td>
+            <td class="cell-moccasin">13.35</td>
+            <td class="cell-lightgreen">6.7</td>
+            <td class="cell-moccasin">0.87</td>
+            <td>131.3</td>
+            <td>25.0</td>
+            <td>1.15</td>
+            <td>6.41</td>
+            <td>3.67</td>
+            <td>47.1</td>
+        </tr>
+        <tr>
+            <td>133</td>
+            <td>AMZN</td>
+            <td>2496</td>
+            <td>531,457</td>
+            <td class="cell-green5">89.8</td>
+            <td class="cell-moccasin">13.35</td>
+            <td class="cell-lightgreen">6.7</td>
+            <td class="cell-moccasin">0.87</td>
+            <td>131.3</td>
+            <td>25.0</td>
+            <td>1.15</td>
+            <td>6.41</td>
+            <td>3.67</td>
+            <td>47.1</td>
+        </tr>
+        <tr>
+            <td>134</td>
+            <td>AMZN</td>
+            <td>2426</td>
+            <td>560,770</td>
+            <td class="cell-green5">94.7</td>
+            <td class="cell-moccasin">13.98</td>
+            <td class="cell-lightgreen">6.8</td>
+            <td class="cell-moccasin">0.82</td>
+            <td>108.1</td>
+            <td>25.7</td>
+            <td>1.17</td>
+            <td>6.12</td>
+            <td>3.84</td>
+            <td>45.0</td>
+        </tr>
+        <tr>
+            <td>135</td>
+            <td>AMZN</td>
+            <td>1550</td>
+            <td>546,935</td>
+            <td class="cell-green5">92.4</td>
+            <td class="cell-moccasin">14.69</td>
+            <td class="cell-lightgreen">6.3</td>
+            <td class="cell-moccasin">0.85</td>
+            <td>108.2</td>
+            <td>25.8</td>
+            <td>1.17</td>
+            <td>5.91</td>
+            <td>3.70</td>
+            <td>42.8</td>
+        </tr>
+        <tr>
+            <td>136</td>
+            <td>AMZN</td>
+            <td>1912</td>
+            <td>546,935</td>
+            <td class="cell-green5">92.4</td>
+            <td class="cell-moccasin">14.69</td>
+            <td class="cell-lightgreen">6.3</td>
+            <td class="cell-moccasin">0.85</td>
+            <td>108.2</td>
+            <td>25.8</td>
+            <td>1.17</td>
+            <td>5.91</td>
+            <td>3.70</td>
+            <td>42.8</td>
+        </tr>
+        <tr>
+            <td>137</td>
+            <td>AMZN</td>
+            <td>837</td>
+            <td>512,493</td>
+            <td class="cell-green5">86.6</td>
+            <td class="cell-moccasin">13.40</td>
+            <td class="cell-lightgreen">6.5</td>
+            <td class="cell-moccasin">0.83</td>
+            <td>108.1</td>
+            <td>25.7</td>
+            <td>1.16</td>
+            <td>5.86</td>
+            <td>3.71</td>
+            <td>42.8</td>
+        </tr>
+        <tr>
+            <td>138</td>
+            <td>AMZN</td>
+            <td>1755</td>
+            <td>512,493</td>
+            <td class="cell-green5">86.6</td>
+            <td class="cell-moccasin">13.40</td>
+            <td class="cell-lightgreen">6.5</td>
+            <td class="cell-moccasin">0.83</td>
+            <td>108.1</td>
+            <td>25.7</td>
+            <td>1.16</td>
+            <td>5.86</td>
+            <td>3.71</td>
+            <td>42.8</td>
+        </tr>
+        <tr>
+            <td>139</td>
+            <td>AMZN</td>
+            <td>1998</td>
+            <td>512,493</td>
+            <td class="cell-green5">86.6</td>
+            <td class="cell-moccasin">13.40</td>
+            <td class="cell-lightgreen">6.5</td>
+            <td class="cell-moccasin">0.83</td>
+            <td>108.1</td>
+            <td>25.7</td>
+            <td>1.16</td>
+            <td>5.86</td>
+            <td>3.71</td>
+            <td>42.8</td>
+        </tr>
+        <tr>
+            <td>140</td>
+            <td>AMZN</td>
+            <td>2241</td>
+            <td>512,493</td>
+            <td class="cell-green5">86.6</td>
+            <td class="cell-moccasin">13.40</td>
+            <td class="cell-lightgreen">6.5</td>
+            <td class="cell-moccasin">0.83</td>
+            <td>108.1</td>
+            <td>25.7</td>
+            <td>1.16</td>
+            <td>5.86</td>
+            <td>3.71</td>
+            <td>42.8</td>
+        </tr>
+        <tr>
+            <td>141</td>
+            <td>AMZN</td>
+            <td>1809</td>
+            <td>501,164</td>
+            <td class="cell-green5">84.6</td>
+            <td class="cell-moccasin">12.98</td>
+            <td class="cell-lightgreen">6.5</td>
+            <td class="cell-moccasin">0.81</td>
+            <td>108.1</td>
+            <td>24.8</td>
+            <td>1.16</td>
+            <td>5.90</td>
+            <td>3.64</td>
+            <td>41.5</td>
+        </tr>
+        <tr>
+            <td>142</td>
+            <td>AMZN</td>
+            <td>2373</td>
+            <td>490,344</td>
+            <td class="cell-green5">82.8</td>
+            <td class="cell-moccasin">14.36</td>
+            <td class="cell-lightgreen">5.8</td>
+            <td class="cell-moccasin">0.86</td>
+            <td>131.3</td>
+            <td>25.0</td>
+            <td>1.14</td>
+            <td>6.46</td>
+            <td>3.59</td>
+            <td>40.0</td>
+        </tr>
+        <tr>
+            <td>143</td>
+            <td>AMZN</td>
+            <td>1338</td>
+            <td>537,450</td>
+            <td class="cell-green5">90.8</td>
+            <td class="cell-moccasin">14.85</td>
+            <td class="cell-lightgreen">6.1</td>
+            <td class="cell-moccasin">0.82</td>
+            <td>108.2</td>
+            <td>25.7</td>
+            <td>1.17</td>
+            <td>5.80</td>
+            <td>3.66</td>
+            <td>39.9</td>
+        </tr>
+        <tr>
+            <td>144</td>
+            <td>AMZN</td>
+            <td>1946</td>
+            <td>537,450</td>
+            <td class="cell-green5">90.8</td>
+            <td class="cell-moccasin">14.85</td>
+            <td class="cell-lightgreen">6.1</td>
+            <td class="cell-moccasin">0.82</td>
+            <td>108.2</td>
+            <td>25.7</td>
+            <td>1.17</td>
+            <td>5.80</td>
+            <td>3.66</td>
+            <td>39.9</td>
+        </tr>
+        <tr>
+            <td>145</td>
+            <td>AMZN</td>
+            <td>2190</td>
+            <td>537,450</td>
+            <td class="cell-green5">90.8</td>
+            <td class="cell-moccasin">14.85</td>
+            <td class="cell-lightgreen">6.1</td>
+            <td class="cell-moccasin">0.82</td>
+            <td>108.2</td>
+            <td>25.7</td>
+            <td>1.17</td>
+            <td>5.80</td>
+            <td>3.66</td>
+            <td>39.9</td>
+        </tr>
+        <tr>
+            <td>146</td>
+            <td>AMZN</td>
+            <td>2297</td>
+            <td>537,450</td>
+            <td class="cell-green5">90.8</td>
+            <td class="cell-moccasin">14.85</td>
+            <td class="cell-lightgreen">6.1</td>
+            <td class="cell-moccasin">0.82</td>
+            <td>108.2</td>
+            <td>25.7</td>
+            <td>1.17</td>
+            <td>5.80</td>
+            <td>3.66</td>
+            <td>39.9</td>
+        </tr>
+        <tr>
+            <td>147</td>
+            <td>AMZN</td>
+            <td>2419</td>
+            <td>487,572</td>
+            <td class="cell-green5">82.4</td>
+            <td class="cell-moccasin">13.37</td>
+            <td class="cell-lightgreen">6.2</td>
+            <td class="cell-moccasin">0.79</td>
+            <td>108.2</td>
+            <td>25.1</td>
+            <td>1.15</td>
+            <td>5.82</td>
+            <td>3.53</td>
+            <td>38.1</td>
+        </tr>
+        <tr>
+            <td>148</td>
+            <td>AMZN</td>
+            <td>929</td>
+            <td>520,504</td>
+            <td class="cell-green5">87.9</td>
+            <td class="cell-moccasin">14.86</td>
+            <td class="cell-lightgreen">5.9</td>
+            <td class="cell-moccasin">0.81</td>
+            <td>126.3</td>
+            <td>28.1</td>
+            <td>1.14</td>
+            <td>5.14</td>
+            <td>3.29</td>
+            <td>37.4</td>
+        </tr>
+        <tr>
+            <td>149</td>
+            <td>AMZN</td>
+            <td>1756</td>
+            <td>520,504</td>
+            <td class="cell-green5">87.9</td>
+            <td class="cell-moccasin">14.86</td>
+            <td class="cell-lightgreen">5.9</td>
+            <td class="cell-moccasin">0.81</td>
+            <td>126.3</td>
+            <td>28.1</td>
+            <td>1.14</td>
+            <td>5.14</td>
+            <td>3.29</td>
+            <td>37.4</td>
+        </tr>
+        <tr>
+            <td>150</td>
+            <td>AMZN</td>
+            <td>882</td>
+            <td>517,596</td>
+            <td class="cell-green5">87.4</td>
+            <td class="cell-moccasin">14.65</td>
+            <td class="cell-lightgreen">6.0</td>
+            <td class="cell-moccasin">0.79</td>
+            <td>126.2</td>
+            <td>28.2</td>
+            <td>1.14</td>
+            <td>5.22</td>
+            <td>3.27</td>
+            <td>36.8</td>
+        </tr>
+        <tr>
+            <td>151</td>
+            <td>AMZN</td>
+            <td>2006</td>
+            <td>517,596</td>
+            <td class="cell-green5">87.4</td>
+            <td class="cell-moccasin">14.65</td>
+            <td class="cell-lightgreen">6.0</td>
+            <td class="cell-moccasin">0.79</td>
+            <td>126.2</td>
+            <td>28.2</td>
+            <td>1.14</td>
+            <td>5.22</td>
+            <td>3.27</td>
+            <td>36.8</td>
+        </tr>
+        <tr>
+            <td>152</td>
+            <td>AMZN</td>
+            <td>2195</td>
+            <td>517,596</td>
+            <td class="cell-green5">87.4</td>
+            <td class="cell-moccasin">14.65</td>
+            <td class="cell-lightgreen">6.0</td>
+            <td class="cell-moccasin">0.79</td>
+            <td>126.2</td>
+            <td>28.2</td>
+            <td>1.14</td>
+            <td>5.22</td>
+            <td>3.27</td>
+            <td>36.8</td>
+        </tr>
+        <tr>
+            <td>153</td>
+            <td>AMZN</td>
+            <td>1633</td>
+            <td>416,855</td>
+            <td class="cell-green5">70.4</td>
+            <td class="cell-moccasin">12.41</td>
+            <td class="cell-lightgreen">5.7</td>
+            <td class="cell-moccasin">0.81</td>
+            <td>108.6</td>
+            <td>22.3</td>
+            <td>1.15</td>
+            <td>6.62</td>
+            <td>3.56</td>
+            <td>36.2</td>
+        </tr>
+        <tr>
+            <td>154</td>
+            <td>AMZN</td>
+            <td>1745</td>
+            <td>416,855</td>
+            <td class="cell-green5">70.4</td>
+            <td class="cell-moccasin">12.41</td>
+            <td class="cell-lightgreen">5.7</td>
+            <td class="cell-moccasin">0.81</td>
+            <td>108.6</td>
+            <td>22.3</td>
+            <td>1.15</td>
+            <td>6.62</td>
+            <td>3.56</td>
+            <td>36.2</td>
+        </tr>
+        <tr>
+            <td>155</td>
+            <td>AMZN</td>
+            <td>2262</td>
+            <td>416,855</td>
+            <td class="cell-green5">70.4</td>
+            <td class="cell-moccasin">12.41</td>
+            <td class="cell-lightgreen">5.7</td>
+            <td class="cell-moccasin">0.81</td>
+            <td>108.6</td>
+            <td>22.3</td>
+            <td>1.15</td>
+            <td>6.62</td>
+            <td>3.56</td>
+            <td>36.2</td>
+        </tr>
+        <tr>
+            <td>156</td>
+            <td>AMZN</td>
+            <td>2381</td>
+            <td>416,855</td>
+            <td class="cell-green5">70.4</td>
+            <td class="cell-moccasin">12.41</td>
+            <td class="cell-lightgreen">5.7</td>
+            <td class="cell-moccasin">0.81</td>
+            <td>108.6</td>
+            <td>22.3</td>
+            <td>1.15</td>
+            <td>6.62</td>
+            <td>3.56</td>
+            <td>36.2</td>
+        </tr>
+        <tr>
+            <td>157</td>
+            <td>AMZN</td>
+            <td>2042</td>
+            <td>415,130</td>
+            <td class="cell-green5">70.1</td>
+            <td class="cell-moccasin">12.44</td>
+            <td class="cell-lightgreen">5.6</td>
+            <td class="cell-moccasin">0.80</td>
+            <td>108.6</td>
+            <td>22.4</td>
+            <td>1.15</td>
+            <td>6.89</td>
+            <td>3.53</td>
+            <td>35.9</td>
+        </tr>
+        <tr>
+            <td>158</td>
+            <td>AMZN</td>
+            <td>1414</td>
+            <td>454,121</td>
+            <td class="cell-green5">76.7</td>
+            <td class="cell-moccasin">14.71</td>
+            <td class="cell-lightgreen">5.2</td>
+            <td class="cell-moccasin">0.77</td>
+            <td>108.1</td>
+            <td>26.0</td>
+            <td>1.14</td>
+            <td>5.12</td>
+            <td>3.53</td>
+            <td>31.0</td>
+        </tr>
+        <tr>
+            <td>159</td>
+            <td>AMZN</td>
+            <td>1800</td>
+            <td>454,121</td>
+            <td class="cell-green5">76.7</td>
+            <td class="cell-moccasin">14.71</td>
+            <td class="cell-lightgreen">5.2</td>
+            <td class="cell-moccasin">0.77</td>
+            <td>108.1</td>
+            <td>26.0</td>
+            <td>1.14</td>
+            <td>5.12</td>
+            <td>3.53</td>
+            <td>31.0</td>
+        </tr>
+        <tr>
+            <td>160</td>
+            <td>AMZN</td>
+            <td>2325</td>
+            <td>454,121</td>
+            <td class="cell-green5">76.7</td>
+            <td class="cell-moccasin">14.71</td>
+            <td class="cell-lightgreen">5.2</td>
+            <td class="cell-moccasin">0.77</td>
+            <td>108.1</td>
+            <td>26.0</td>
+            <td>1.14</td>
+            <td>5.12</td>
+            <td>3.53</td>
+            <td>31.0</td>
+        </tr>
+        <tr>
+            <td>161</td>
+            <td>AMZN</td>
+            <td>2358</td>
+            <td>454,121</td>
+            <td class="cell-green5">76.7</td>
+            <td class="cell-moccasin">14.71</td>
+            <td class="cell-lightgreen">5.2</td>
+            <td class="cell-moccasin">0.77</td>
+            <td>108.1</td>
+            <td>26.0</td>
+            <td>1.14</td>
+            <td>5.12</td>
+            <td>3.53</td>
+            <td>31.0</td>
+        </tr>
+        <tr>
+            <td>162</td>
+            <td>AMZN</td>
+            <td>1246</td>
+            <td>397,563</td>
+            <td class="cell-green5">67.1</td>
+            <td class="cell-moccasin">14.96</td>
+            <td class="cell-lightgreen">4.5</td>
+            <td class="cell-moccasin">0.76</td>
+            <td>108.6</td>
+            <td>22.1</td>
+            <td>1.14</td>
+            <td>5.80</td>
+            <td>3.40</td>
+            <td>25.8</td>
+        </tr>
+        <tr>
+            <td>163</td>
+            <td>AMZN</td>
+            <td>1390</td>
+            <td>397,563</td>
+            <td class="cell-green5">67.1</td>
+            <td class="cell-moccasin">14.96</td>
+            <td class="cell-lightgreen">4.5</td>
+            <td class="cell-moccasin">0.76</td>
+            <td>108.6</td>
+            <td>22.1</td>
+            <td>1.14</td>
+            <td>5.80</td>
+            <td>3.40</td>
+            <td>25.8</td>
+        </tr>
+        <tr>
+            <td>164</td>
+            <td>AMZN</td>
+            <td>1785</td>
+            <td>397,563</td>
+            <td class="cell-green5">67.1</td>
+            <td class="cell-moccasin">14.96</td>
+            <td class="cell-lightgreen">4.5</td>
+            <td class="cell-moccasin">0.76</td>
+            <td>108.6</td>
+            <td>22.1</td>
+            <td>1.14</td>
+            <td>5.80</td>
+            <td>3.40</td>
+            <td>25.8</td>
+        </tr>
+        <tr>
+            <td>165</td>
+            <td>AMZN</td>
+            <td>2049</td>
+            <td>397,563</td>
+            <td class="cell-green5">67.1</td>
+            <td class="cell-moccasin">14.96</td>
+            <td class="cell-lightgreen">4.5</td>
+            <td class="cell-moccasin">0.76</td>
+            <td>108.6</td>
+            <td>22.1</td>
+            <td>1.14</td>
+            <td>5.80</td>
+            <td>3.40</td>
+            <td>25.8</td>
+        </tr>
+        <tr>
+            <td>166</td>
+            <td>AMZN</td>
+            <td>2244</td>
+            <td>397,563</td>
+            <td class="cell-green5">67.1</td>
+            <td class="cell-moccasin">14.96</td>
+            <td class="cell-lightgreen">4.5</td>
+            <td class="cell-moccasin">0.76</td>
+            <td>108.6</td>
+            <td>22.1</td>
+            <td>1.14</td>
+            <td>5.80</td>
+            <td>3.40</td>
+            <td>25.8</td>
+        </tr>
+        <tr>
+            <td>167</td>
+            <td>AMZN</td>
+            <td>2493</td>
+            <td>207,886</td>
+            <td class="cell-green5">35.1</td>
+            <td class="cell-moccasin">14.44</td>
+            <td class="cell-lightgreen">2.4</td>
+            <td class="cell-moccasin">0.81</td>
+            <td>35.2</td>
+            <td>37.0</td>
+            <td>1.18</td>
+            <td>4.44</td>
+            <td>3.49</td>
+            <td>17.4</td>
+        </tr>
+    </tbody>
+</table>
+
+<script>
+$(document).ready(function() {
+    // Setup column filters
+    $('#reportTable thead tr.filters th').each(function(i) {
+        var title = $(this).text();
+        if (title === 'Symbol') {
+            $(this).html('<select class="column-filter"><option value="">All</option><option value="AAPL">AAPL</option><option value="AMZN">AMZN</option></select>');
+        } else if (title !== '#') {
+            $(this).html('<input type="text" class="column-filter" placeholder="Filter...">');
+        } else {
+            $(this).html('');
+        }
+    });
+    
+    // Initialize DataTable
+    var table = $('#reportTable').DataTable({
+        orderCellsTop: true,
+        pageLength: 50,
+        lengthMenu: [[25, 50, 100, -1], [25, 50, 100, "All"]],
+        order: [],  // No default sorting
+        columnDefs: [
+            { targets: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], type: 'num' }  // Numeric columns
+        ]
+    });
+    
+    // Apply column filters
+    $('#reportTable thead tr.filters th').each(function(i) {
+        $('input, select', this).on('keyup change', function() {
+            if (table.column(i).search() !== this.value) {
+                table.column(i).search(this.value).draw();
+            }
+        });
+    });
+});
+</script>
+
+</body>
+</html>
